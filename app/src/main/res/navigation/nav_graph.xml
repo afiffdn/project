@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/splashFragment2"
+        android:name="com.example.spksmpn4bunta.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.example.spksmpn4bunta.ui.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.spksmpn4bunta.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.spksmpn4bunta.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment2"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.spksmpn4bunta.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dataDiriFragment2"
+            app:destination="@id/dataDiriFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_isActiveFragment"
+            app:destination="@id/isActiveFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_editAcountFragment3"
+            app:destination="@id/editAcountFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment3"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataDiriFragment"
+        android:name="com.example.spksmpn4bunta.ui.DataDiriFragment"
+        android:label="fragment_data_diri"
+        tools:layout="@layout/fragment_data_diri" />
+    <fragment
+        android:id="@+id/editAcountFragment"
+        android:name="com.example.spksmpn4bunta.ui.EditAcountFragment"
+        android:label="fragment_edit_account"
+        tools:layout="@layout/fragment_edit_account" />
+    <fragment
+        android:id="@+id/isActiveFragment"
+        android:name="com.example.spksmpn4bunta.ui.IsActiveFragment"
+        android:label="fragment_is_active"
+        tools:layout="@layout/fragment_is_active" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.spksmpn4bunta.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

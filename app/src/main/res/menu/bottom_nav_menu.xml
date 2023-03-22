@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home" android:icon="@drawable/ic_home" android:id="@+id/homeFragment"/>
+    <item android:title="Alternatif" android:icon="@drawable/ic_sell" android:id="@+id/alternatifFragment"/>
+    <item android:title="Rangking" android:icon="@drawable/ic_menu" android:id="@+id/rangkingFragment"/>
+    <item android:title="Account" android:icon="@drawable/ic_baseline_person_24" android:id="@+id/accountFragment"/>
+</menu>

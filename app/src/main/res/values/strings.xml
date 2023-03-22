@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SPK SMP N 4 Bunta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="siswa">1. setelah register dan login lengkapi data diri yang ada pada menu data diri dibawah ini\n\n2. kemudian masuk ke halaman data diri yang ada pada menu setting, jika kamu belum pernah memasukkan data diri, isi form yang ada lalu klik tombol tambah, jika ingin merubah data diri, cukup isi kembali formulir lalu klik ubah\n\n3. kemudian jika sudah selesai kembali ke menu utama, lalu klik menu alternatif\n\n 4. Jika ingin merubah data registrasi seperti username dan password, kamu bisa masuk ke menu account kemudian pilih edit account\n\n5. pada menu alternatif masukkan data yang sesuai dengan raport sampai akhir, dari semester 1 hingga semester 2 setelah selesai, klik tombol semester 1 , jika ingin mengirim nilai semester 1, begitupun semester 2, tombol edit digunakan untuk merubah jika ada data yang ingin dirubah\n\n6. setelah itu tunggu pengumuman dari sekolah siapa yang akan menerima beasiswa\n\n7. jika ingin logout klik tombol di ujung kanan menu home.
+</string>
+    <string name="aboutadmin">1. setelah register dan login lengkapi data diri yang ada pada menu data diri dibawah ini\n
+2. pada menu data diri, jika kamu belum pernah memasukkan data diri, isi form yang ada lalu klik tombol tambah, jika ingin merubah data diri, cukup isi kembali formulir lalu klik ubah\n
+3. jika ingin melakukan perangkingan, klik menu rangking, kemudian klik tombol perangkingan\n
+4. jika ingin melihat nilai siswa, klik nama siswa yang tertera pada menu perangkingan\n
+5. jika terdapat siswa yang curang atau nilai yang tertera tidak sesuai dengan nilai di raport, admin dapat menghapus nilai tersebut dengan menekan tombol hapus yang ada pada ujung kanan menu detail\n
+6. terdapat juga tombol print, yang nilai tersebut akan di cetak dalam bentuk pdf\n
+7. jika ingin logout klik tombol di ujung kanan menu home.\n\n8. Jika ingin merubah data registrasi seperti username dan password, kamu bisa masuk ke menu account kemudian pilih edit account
+</string>
+    <string name="hallo">Hallo %s</string>
+    <string name="role">%s</string>
+    <string name="string_gender">jenis kelamin</string>
+    <string name="string_agama">Agama</string>
+    <string name="string_kelas">Kelas</string>
+    <string name="nama_siswa">Nama Siswa</string>
+</resources>

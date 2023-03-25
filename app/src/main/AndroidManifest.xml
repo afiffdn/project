@@ -11,6 +11,7 @@
         android:name=".MainApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:requestLegacyExternalStorage="true"
         android:fullBackupContent="@xml/backup_rules"
         android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"

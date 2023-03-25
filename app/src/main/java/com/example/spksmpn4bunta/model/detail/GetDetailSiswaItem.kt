@@ -49,6 +49,8 @@ data class GetDetailSiswaItem(
     val mtk: Int,
     @SerializedName("nama")
     val nama: String,
+    @SerializedName("kelas")
+    val kelas: String,
     @SerializedName("nisn")
     val nisn: String,
     @SerializedName("olahraga")

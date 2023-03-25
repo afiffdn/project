@@ -8,6 +8,7 @@ import com.example.spksmpn4bunta.model.auth.*
 import com.example.spksmpn4bunta.model.datadiri.DataDiriReq
 import com.example.spksmpn4bunta.model.datadiri.DataDiriResp
 import com.example.spksmpn4bunta.model.detail.GetDetailSiswaItem
+import com.example.spksmpn4bunta.model.detail.Messagedelete
 import com.example.spksmpn4bunta.model.rangking.GetNilaiSawRespItem
 import retrofit2.http.*
 
@@ -65,8 +66,19 @@ interface ApiService {
     suspend fun getDetail(
         @Header("AUTHORIZATION") token: String,
         @Path("id") id: Int
-    ):GetDetailSiswaItem
+    ):List<GetDetailSiswaItem>
 
+    @GET("admin-detail-siswa2/{id}")
+    suspend fun getDetail2(
+        @Header("AUTHORIZATION") token: String,
+        @Path("id") id: Int
+    ):List<GetDetailSiswaItem>
+
+    @DELETE("admin-detail-siswa/{id}")
+    suspend fun deleteDetail(
+        @Header("AUTHORIZATION") token: String,
+        @Path("id") id: Int
+    ):List<Messagedelete>
 
 //    @GET("buyer/product")
 //    suspend fun getAllProduct(

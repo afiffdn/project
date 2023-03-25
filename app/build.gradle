@@ -102,5 +102,8 @@ dependencies {
     implementation 'dev.chrisbanes.insetter:insetter:0.6.1'
     // image slider
     implementation 'com.github.Fuadafdhal:Auto-Image-Slider:1.0'
+    
+    implementation 'com.itextpdf:itextpdf:5.5.13.2'
+
 
 }

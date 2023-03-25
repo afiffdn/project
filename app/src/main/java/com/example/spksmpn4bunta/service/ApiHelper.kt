@@ -38,6 +38,15 @@ class ApiHelper @Inject constructor(private val apiService: ApiService) {
     suspend fun getDetail(token: String, id: Int) =
         apiService.getDetail("Bearer ".plus(token), id)
 
+
+    suspend fun getDetail2(token: String, id: Int) =
+        apiService.getDetail2("Bearer ".plus(token), id)
+
+    suspend fun deleteDetail(token: String, id: Int) =
+        apiService.deleteDetail("Bearer ".plus(token), id)
+
+
+
 //    suspend fun postRegUser(requestBody: RegistReq) = apiService.postRegUser(requestBody)
 //    suspend fun postLoginUser(requestBody: LoginReq) = apiService.postLogin(requestBody)
 //    suspend fun getAllProduct(status:String?=null,categoryId:String?=null,search :String?=null) = apiService.getAllProduct(status,categoryId,search)

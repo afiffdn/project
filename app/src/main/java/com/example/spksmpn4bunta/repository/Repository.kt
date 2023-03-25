@@ -42,6 +42,12 @@ class Repository(
     suspend fun getDetail(token: String, id: Int) =
         apiHelper.getDetail(token, id)
 
+    suspend fun getDetail2(token: String, id: Int) =
+        apiHelper.getDetail2(token, id)
+
+    suspend fun deleteDetail(token: String, id: Int) =
+        apiHelper.deleteDetail(token, id)
+
 //    // login and register
 //    suspend fun postRegUser(requestBody: RegistReq) = apiHelper.postRegUser(requestBody)
 //    suspend fun postLogin(requestBody: LoginReq) = apiHelper.postLoginUser(requestBody)

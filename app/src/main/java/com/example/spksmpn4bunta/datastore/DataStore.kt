@@ -43,7 +43,7 @@ class DataStore(private val context: Context) {
             )
         }
     }
-    suspend fun saveUser(userData: LoginReq) {
+    suspend fun saveUser(userData: Data) {
         context.datastore.edit {
             it[USERNAME] = userData.username
             it[PASSWORD] = userData.password
@@ -52,9 +52,9 @@ class DataStore(private val context: Context) {
     }
 
 
-    fun getUser(): Flow<LoginReq> {
+    fun getUser(): Flow<Data> {
         return context.datastore.data.map {
-            LoginReq(
+            Data(
                 it[USERNAME] ?:  DEF_USERNAME,
                 it[PASSWORD] ?: DEF_PASSWORD,
                 it[SEBAGAI] ?: DEF_SEBAGAI

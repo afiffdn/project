@@ -1,4 +1,5 @@
 package com.example.spksmpn4bunta.repository
+import com.example.spksmpn4bunta.datastore.Data
 import com.example.spksmpn4bunta.datastore.DataStore
 import com.example.spksmpn4bunta.model.datadiri.DataDiriReq
 import com.example.spksmpn4bunta.model.auth.LoginReq
@@ -20,8 +21,8 @@ class Repository(
 
     //datastore
     suspend fun setDatastore(user: Users) = dataStore.setToken(user)
-    suspend fun saveUserPref(user: LoginReq)=dataStore.saveUser(user)
-    suspend fun getUserPref () : Flow<LoginReq> = dataStore.getUser()
+    suspend fun saveUserPref(user: Data)=dataStore.saveUser(user)
+    suspend fun getUserPref () : Flow<Data> = dataStore.getUser()
     suspend fun deleteDataStore()=dataStore.delete()
     suspend fun getToken():Flow<Users> = dataStore.getToken()
 

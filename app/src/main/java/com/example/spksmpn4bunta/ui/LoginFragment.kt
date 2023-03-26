@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.spksmpn4bunta.R
 import com.example.spksmpn4bunta.databinding.FragmentLoginBinding
+import com.example.spksmpn4bunta.datastore.Data
 import com.example.spksmpn4bunta.model.auth.LoginReq
 import com.example.spksmpn4bunta.model.Status
 import com.example.spksmpn4bunta.model.Users
@@ -89,7 +90,8 @@ class LoginFragment : Fragment() {
         val password = binding.etPassword.text.toString()
         val sebagai = binding.etSebagai.text.toString()
         val loginReq = LoginReq(username,password,sebagai)
+        val data = Data(username, password, sebagai)
         viewModel.loginPost(loginReq)
-        viewModel.saveUserPref(loginReq)
+        viewModel.saveUserPref(data)
     }
 }

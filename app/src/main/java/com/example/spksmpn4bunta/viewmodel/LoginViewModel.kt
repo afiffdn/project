@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.spksmpn4bunta.datastore.Data
 import com.example.spksmpn4bunta.model.*
 import com.example.spksmpn4bunta.model.auth.LoginReq
 import com.example.spksmpn4bunta.model.auth.LoginResp
@@ -33,7 +34,7 @@ class LoginViewModel  @Inject constructor(private val repository: Repository) : 
             repository.setDatastore(user)
         }
     }
-    fun saveUserPref(userPref : LoginReq){
+    fun saveUserPref(userPref : Data){
         viewModelScope.launch {
             repository.saveUserPref(userPref)
         }

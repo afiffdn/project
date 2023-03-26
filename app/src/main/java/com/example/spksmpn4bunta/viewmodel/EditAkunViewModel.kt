@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.spksmpn4bunta.datastore.Data
 import com.example.spksmpn4bunta.model.Resource
 import com.example.spksmpn4bunta.model.Users
 import com.example.spksmpn4bunta.model.auth.ChangeRegistReq
@@ -23,6 +24,17 @@ class EditAkunViewModel  @Inject constructor(private val repository: Repository)
     private val _getToken = MutableLiveData<Users>()
     val getToken: LiveData<Users> get() = _getToken
 
+    private val _userPref = MutableLiveData<Data>()
+    val userPref : LiveData<Data> get() =_userPref
+
+    fun getUserPref(){
+        viewModelScope.launch {
+            repository.getUserPref().collect(){
+                _userPref.postValue(it)
+            }
+        }
+    }
+
     fun putRegist(token: String,requestBody : ChangeRegistReq) {
         viewModelScope.launch {
             _putRegist.postValue(Resource.loading())
@@ -39,6 +51,12 @@ class EditAkunViewModel  @Inject constructor(private val repository: Repository)
             repository.getToken().collect {
                 _getToken.postValue(it)
             }
+        }
+    }
+
+    fun saveUserPref(userPref : Data){
+        viewModelScope.launch {
+            repository.saveUserPref(userPref)
         }
     }
 

@@ -13,6 +13,7 @@ import com.example.spksmpn4bunta.R
 import com.example.spksmpn4bunta.databinding.FragmentAccountBinding
 import com.example.spksmpn4bunta.databinding.FragmentDataDiriBinding
 import com.example.spksmpn4bunta.databinding.FragmentEditAccountBinding
+import com.example.spksmpn4bunta.datastore.Data
 import com.example.spksmpn4bunta.model.Status
 import com.example.spksmpn4bunta.model.auth.ChangeRegistReq
 import com.example.spksmpn4bunta.viewmodel.DataDiriViewModel
@@ -39,6 +40,7 @@ class EditAcountFragment : Fragment() {
 
         viewModel.getToken()
         viewModel.getToken.observe(viewLifecycleOwner){
+            viewModel.getUserPref()
             var token = it.token
             binding.btnUbah.setOnClickListener {
                 val reqData = ChangeRegistReq(
@@ -46,6 +48,13 @@ class EditAcountFragment : Fragment() {
                     binding.etPasswordBaru.text.toString()
                 )
                 viewModel.putRegist(token,reqData)
+                val username = binding.etUsernameBaru.text.toString()
+                val password = binding.etPasswordBaru .text.toString()
+                viewModel.userPref.observe(viewLifecycleOwner){
+                    val data = Data(username,password,it.sebagai)
+                    viewModel.saveUserPref(data)
+                }
+
             }
         }
         binding.btnBack.setOnClickListener {

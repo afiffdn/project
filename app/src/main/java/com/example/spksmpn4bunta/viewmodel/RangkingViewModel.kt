@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.spksmpn4bunta.datastore.Data
 import com.example.spksmpn4bunta.model.Resource
 import com.example.spksmpn4bunta.model.Users
 import com.example.spksmpn4bunta.model.auth.LoginReq
@@ -22,8 +23,8 @@ class RangkingViewModel @Inject constructor(private val repository: Repository) 
     private val _getToken = MutableLiveData<Users>()
     val getToken: LiveData<Users> get() = _getToken
 
-    private val _userPref = MutableLiveData<LoginReq>()
-    val userPref : LiveData<LoginReq> get() =_userPref
+    private val _userPref = MutableLiveData<Data>()
+    val userPref : LiveData<Data> get() =_userPref
 
     fun getNilaiSaw(token: String){
         viewModelScope.launch {

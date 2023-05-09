@@ -74,8 +74,6 @@ class RangkingFragment : Fragment() {
                     progressDialog.show()
                 }
                 Status.SUCCESS -> {
-                    Toast.makeText(requireContext(), "data berhasil disimpan", Toast.LENGTH_SHORT)
-                        .show()
                     val adapter = RangkingAdapter(object : RangkingAdapter.onClickListener {
                         override fun onClickItem(data: GetNilaiSawRespItem) {
                             MainFragment.currentPage = R.id.rangkingFragment

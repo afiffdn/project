@@ -18,7 +18,13 @@ class ActivatedAdapater(private val onItemClick: onClickListener) :
 
     }
     private val differ = AsyncListDiffer(this,diffCallBack)
-    fun submitData(value: List<GetUsersRespItem>?) = differ.submitList(value)
+    fun submitData(value: List<GetUsersRespItem>?) {
+        value?.let {
+            val sortedList = it.sortedByDescending { it.id_users }
+            differ.submitList(sortedList.toList())
+            notifyDataSetChanged()
+        }
+    }
 
     interface onClickListener {
         fun onClickItem (data: GetUsersRespItem)

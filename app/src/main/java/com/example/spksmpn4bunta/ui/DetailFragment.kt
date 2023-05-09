@@ -1,5 +1,6 @@
 package com.example.spksmpn4bunta.ui
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.util.Log
@@ -35,6 +36,7 @@ class DetailFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getToken()
@@ -62,9 +64,9 @@ class DetailFragment : Fragment() {
                 }
                 Status.SUCCESS ->{
                     binding.apply {
-                        tvNama.text = resources.data?.nama
-                        tvNisn.text = resources.data?.nisn
-                        tvKelas.text = resources.data?.kelas
+                        tvNama.setText("Nama : ${resources.data?.nama}")
+                        tvNisn.setText("Nisn : 000${resources.data?.nisn}")
+                        tvKelas.setText("Kelas : ${resources.data?.kelas}")
                         tvNilaiAgama.text = resources.data?.pend_agama.toString()
                         tvNilaiPancasila.text = resources.data?.pend_pancasila.toString()
                         tvNilaiBahasaIndo.text = resources.data?.bahasa_indo.toString()

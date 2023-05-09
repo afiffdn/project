@@ -149,7 +149,7 @@
 
                 <TextView
                     android:id="@+id/tv_aspek_matapelajaran"
-                    android:text="Aspek Matapelajaran\nSemester 1"
+                    android:text="Aspek Matapelajaran"
                     android:fontFamily="@font/poppins_bold"
                     android:textSize="18sp"
                     android:gravity="center"
@@ -459,7 +459,7 @@
 <!--aspek ktrampilan-->
                 <TextView
                     android:id="@+id/tv_aspek_ketrampilan"
-                    android:text="Aspek Ketrampilan\nSemester 1"
+                    android:text="Aspek Ketrampilan"
                     android:fontFamily="@font/poppins_bold"
                     android:textSize="18sp"
                     android:gravity="center"
@@ -768,7 +768,7 @@
 
                 <TextView
                     android:id="@+id/tv_aspek_ekstra"
-                    android:text="Aspek Ekstrakulikuler\nSemester 1"
+                    android:text="Aspek Ekstrakulikuler"
                     android:fontFamily="@font/poppins_bold"
                     android:textSize="18sp"
                     android:gravity="center"
@@ -845,7 +845,7 @@
 
                 <TextView
                     android:id="@+id/tv_aspek_sikap"
-                    android:text="Aspek Sikap\nSemester 1"
+                    android:text="Aspek Sikap"
                     android:fontFamily="@font/poppins_bold"
                     android:textSize="18sp"
                     android:gravity="center"
@@ -902,7 +902,7 @@
 
                 <TextView
                     android:id="@+id/tv_aspek_kehadiran"
-                    android:text="Aspek Kehadiran\nSemester 1"
+                    android:text="Aspek Kehadiran"
                     android:fontFamily="@font/poppins_bold"
                     android:textSize="18sp"
                     android:gravity="center"
@@ -970,7 +970,7 @@
                     android:text="Nilai"
                     android:fontFamily="@font/poppins_regular"
                     android:textSize="18sp"
-                    android:layout_marginStart="110dp"
+                    android:layout_marginStart="100dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
